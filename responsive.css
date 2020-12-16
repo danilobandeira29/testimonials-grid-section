@@ -77,18 +77,23 @@ body {
 }
 
 .container section .card:nth-child(1) .card-header .card-header-title p,
-.container section .card:nth-child(2) .card-header .card-header-title p{
+.container section .card:nth-child(2) .card-header .card-header-title p,
+.container section .card:nth-child(4) .card-header .card-header-title p
+{
   color: hsl(0, 0%, 100%);
   opacity: 50%;
 }
 
 .container section .card:nth-child(1) > strong,
-.container section .card:nth-child(2) > strong {
+.container section .card:nth-child(2) > strong, 
+.container section .card:nth-child(4) > strong 
+{
   color: hsl(0, 0%, 90%);
 }
 
 .container section .card:nth-child(1) > p,
-.container section .card:nth-child(2) > p {
+.container section .card:nth-child(2) > p,
+.container section .card:nth-child(4) > p {
   color: hsl(0, 0%, 81%);
   opacity: 50%;
 }
@@ -125,6 +130,11 @@ body {
 /*---------------END third child---------------*/
 
 
-.container section .card:nth-child(odd) .card-header img {
+.container section .card:nth-child(1) .card-header img,
+.container section .card:nth-child(4) .card-header img {
   border: 3px solid hsl(263, 51%, 59%);
+}
+
+.container section .card:nth-child(4) {
+  background: hsl(219, 29%, 14%);
 }
