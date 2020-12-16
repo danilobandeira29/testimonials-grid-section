@@ -112,18 +112,24 @@ body {
 
 /*---------------START third child---------------*/
 
-.container section .card:nth-child(3) {
+.container section .card:nth-child(3),
+.container section .card:nth-child(5)
+ {
   background: hsl(0, 0%, 100%);
 }
 
 .container section .card:nth-child(3) .card-header .card-header-title strong, p,
-.container section .card:nth-child(3) > strong, p
+.container section .card:nth-child(3) > strong, p,
+.container section .card:nth-child(5) .card-header .card-header-title strong, p,
+.container section .card:nth-child(5) > strong, p
 {
   color: hsl(217, 19%, 35%);
 }
 
 .container section .card:nth-child(3) .card-header .card-header-title p,
-.container section .card:nth-child(3) > p {
+.container section .card:nth-child(3) > p,
+.container section .card:nth-child(5) .card-header .card-header-title p,
+.container section .card:nth-child(5) > p {
   opacity: 50%;
 }
 
