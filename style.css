@@ -1,0 +1,194 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.3rem;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background: hsl(210, 46%, 95%);
+}
+
+.container {
+  width: 80%;
+  min-width: 320px;
+  margin: 6rem auto;
+}
+
+.container section {
+  display: flex;
+  flex-direction: column;
+}
+
+.container section .card {
+  padding: 3rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+}
+
+.container section .card > h3 {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+
+.container section .card > p {
+  opacity: 70%;
+}
+
+.container section .card .card-header {
+  display: flex;
+  justify-items: center;
+  align-items:center ;
+  margin-bottom: 2rem;
+}
+
+.container section .card .card-header img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.container section .card .card-header .card-header-title {
+  color: hsl(0, 0%, 81%);
+}
+
+
+.container section .card .card-header .card-header-title p {
+  margin: .4rem 0 0 0;
+  opacity: 50%;
+}
+
+.container section .card:nth-child(1){
+  background: hsl(263, 55%, 52%);
+}
+
+.container section .card:nth-child(1) .card-header .card-header-title p,
+.container section .card:nth-child(2) .card-header .card-header-title p,
+.container section .card:nth-child(4) .card-header .card-header-title p
+{
+  color: hsl(0, 0%, 100%);
+  opacity: 50%;
+}
+
+.container section .card:nth-child(1) > h3,
+.container section .card:nth-child(2) > h3, 
+.container section .card:nth-child(4) > h3 
+{
+  color: hsl(0, 0%, 90%);
+}
+
+.container section .card:nth-child(1) > p,
+.container section .card:nth-child(2) > p,
+.container section .card:nth-child(4) > p {
+  color: hsl(0, 0%, 81%);
+  opacity: 50%;
+}
+
+.container section .card:nth-child(2) {
+  background: hsl(217, 19%, 35%);
+}
+
+.container section .card:nth-child(3),
+.container section:nth-child(2) .card
+ {
+  background: hsl(0, 0%, 100%);
+}
+
+.container section .card:nth-child(3) .card-header .card-header-title strong, p,
+.container section .card:nth-child(3) .card-header .card-header-title p,
+.container section .card:nth-child(3) h3,
+.container section .card:nth-child(3) p,
+
+.container section:nth-child(2) .card .card-header .card-header-title strong,
+.container section:nth-child(2) .card .card-header .card-header-title p,
+.container section:nth-child(2) .card h3,
+.container section:nth-child(2) .card p
+{
+  color: hsl(217, 19%, 35%);
+}
+
+.container section .card:nth-child(3) .card-header .card-header-title p,
+.container section .card:nth-child(3) > p,
+.container section:nth-child(2) .card .card-header .card-header-title p,
+.container section:nth-child(2) .card > p {
+  opacity: 50%;
+}
+
+.container section:nth-child(1)  .card:nth-child(1) .card-header img,
+.container section:nth-child(1) .card:nth-child(4) .card-header img {
+  border: 3px solid hsl(263, 51%, 59%);
+}
+
+.container section .card:nth-child(4) {
+  background: hsl(219, 29%, 14%);
+}
+
+.container section:nth-child(1) .card:nth-child(1) {
+  grid-area: card1;
+}
+
+.container section:nth-child(1) .card:nth-child(2) {
+  grid-area: card2;
+}
+
+.container section:nth-child(1) .card:nth-child(3) {
+  grid-area: card3;
+}
+
+.container section:nth-child(1) .card:nth-child(4) {
+  grid-area: card4;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.6rem;
+  }
+  
+  .container {
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+      "multipleCards soloCard";
+    gap: 0 3rem;
+  }
+
+  .container section .card {
+    box-shadow: 0 4px 20px -2px gray;
+  }
+  
+  .container section:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+      "card1 card1 card2"
+      "card3 card4 card4"
+    ;
+    gap: 0 3rem;
+
+    grid-area: multipleCards;
+  }
+
+  .container section .card h3 {
+    font-size: 2rem;
+  }
+
+  .container section:nth-child(2) .card {
+    grid-area: soloCard;
+    height: 100%;
+  }
+
+}
