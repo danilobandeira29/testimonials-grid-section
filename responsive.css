@@ -29,24 +29,17 @@ body {
 
 .container section .card {
   padding: 3rem;
-  background: hsl(263, 55%, 52%);
   border-radius: 1rem;
   margin-bottom: 2rem;
 }
 
 .container section .card > strong {
-  color: hsl(0, 0%, 90%);
   font-size: 1.8rem;
   line-height: 2.7rem;
 }
 
 .container section .card > p {
-  color: hsl(0, 0%, 81%);
   opacity: 70%;
-}
-
-.container section .card:last-child {
-  margin-bottom: 0;
 }
 
 .container section .card .card-header {
@@ -60,10 +53,8 @@ body {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  border: 3px solid hsl(263, 51%, 59%);
   margin-right: 2rem;
 }
-
 
 .container section .card .card-header .card-header-title {
   color: hsl(0, 0%, 81%);
@@ -73,4 +64,67 @@ body {
 .container section .card .card-header .card-header-title p {
   margin: .4rem 0 0 0;
   opacity: 50%;
+}
+
+.container section .card:last-child {
+  margin-bottom: 0;
+}
+
+/*---------------START first child---------------*/
+
+.container section .card:nth-child(1){
+  background: hsl(263, 55%, 52%);
+}
+
+.container section .card:nth-child(1) .card-header .card-header-title p,
+.container section .card:nth-child(2) .card-header .card-header-title p{
+  color: hsl(0, 0%, 100%);
+  opacity: 50%;
+}
+
+.container section .card:nth-child(1) > strong,
+.container section .card:nth-child(2) > strong {
+  color: hsl(0, 0%, 90%);
+}
+
+.container section .card:nth-child(1) > p,
+.container section .card:nth-child(2) > p {
+  color: hsl(0, 0%, 81%);
+  opacity: 50%;
+}
+
+/*---------------END first child---------------*/
+
+
+/*---------------START second child---------------*/
+
+.container section .card:nth-child(2) {
+  background: hsl(217, 19%, 35%);
+}
+
+/*---------------END second child---------------*/
+
+
+/*---------------START third child---------------*/
+
+.container section .card:nth-child(3) {
+  background: hsl(0, 0%, 100%);
+}
+
+.container section .card:nth-child(3) .card-header .card-header-title strong, p,
+.container section .card:nth-child(3) > strong, p
+{
+  color: hsl(217, 19%, 35%);
+}
+
+.container section .card:nth-child(3) .card-header .card-header-title p,
+.container section .card:nth-child(3) > p {
+  opacity: 50%;
+}
+
+/*---------------END third child---------------*/
+
+
+.container section .card:nth-child(odd) .card-header img {
+  border: 3px solid hsl(263, 51%, 59%);
 }
